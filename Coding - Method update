@@ -1,0 +1,26 @@
+//Passing Array to Method
+	public static void pointEarned(double[] point) {
+		double pointEarned = 0;
+		double totalCreditHours;
+		double GPA;
+		int creditHours = 3;
+		
+		for (int i=0;i<point.length; i++) {
+			pointEarned = pointEarned + point[i];
+		}
+		totalCreditHours = creditHours * 6;
+		GPA = pointEarned / totalCreditHours;
+		if (GPA >= 2.00) {
+			System.out.println("\n      />> Total credit hours for Semester 1        : " +totalCreditHours);
+			System.out.printf("      />> Total grade points earned for Semester 1 : %.2f", pointEarned);
+			System.out.printf("\n      />> GPA for Semester 1                       : %.2f", GPA);
+			System.out.printf("\n\n      YOU PASSED THE SEMESTER. CONGRATULATIONS!");
+		}
+		else if (GPA < 2.00) {
+			System.out.println("\n      />> Total credit hours for Semester 1        : " +totalCreditHours);
+			System.out.printf("      />> Total grade points earned for Semester 1 : %.2f", pointEarned);
+			System.out.printf("\n      />> GPA for Semester 1                       : %.2f", GPA);
+			System.out.printf("\n\n      YOU FAILED THE SEMESTER.");
+		}
+		
+	}
